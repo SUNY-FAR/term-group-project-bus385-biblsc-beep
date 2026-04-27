@@ -1,8 +1,8 @@
-SELECT ArtistName,
+SELECT artistname,
        COUNT(*) AS total_streams
-FROM Artists
-JOIN Albums ON Artists.ArtistID = Albums.ArtistID
-JOIN Songs ON Albums.AlbumID = Songs.AlbumID
-JOIN Streams ON Songs.SongID = Streams.SongID
-GROUP BY ArtistName
+FROM artists
+JOIN albums ON artists.artistid = albums.artistid
+JOIN songs ON albums.albumid = songs.albumid
+JOIN streams ON songs.songid = streams.songid
+GROUP BY artistname
 ORDER BY total_streams DESC;
