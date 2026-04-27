@@ -1,1 +1,2 @@
--- Write your SQL query below:
+SELECT id, username
+FROM users;
